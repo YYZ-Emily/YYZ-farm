@@ -11,7 +11,7 @@ def parse_file(path):
     i=0
     space=o
     tab=0
-    for i,x in enumerate(path):
+    for i,line in enumerate(path):
         space+=line.count(' ')
         tab+=line.count('\t')
     fobj.close()
@@ -26,7 +26,7 @@ def main(path):
     else:
         print('Path not exit')
 
-if _name_=='_main_':
+if ＿name＿=='＿main＿':
     if len(sys.argv)>1:
         main(sys.argv[1])
     else:
