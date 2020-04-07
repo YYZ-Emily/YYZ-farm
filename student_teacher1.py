@@ -17,13 +17,16 @@ class Person(object):
     def get_grade():
         if sys.argv[1]=='teacher':
             grade=sys.argv[2]
-            output=collections.defaultdict(list)
+            output={}
             for x in ['A','B','C','D']:
+               # print(grade.count(x))
                 output[x]=grade.count(x)
-            print(output)
+            for x,y in enumerate(output):
+                print(y,':',x,end=',')
+
         elif sys.argv[1]=='student':
             grade=sys.argv[2]
-            output=collections.defaultdict(list)
+            output={}
             output['Pass']=0
             for x in ['A','B','C']:
                 output['Pass']+=grade.count(x)
